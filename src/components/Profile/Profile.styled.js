@@ -38,7 +38,8 @@ background-color: lightgrey;
 `;
 
 export const Image = styled.img`
-
+border-radius: 50%;
+outline: grey 1px solid;
 width: 100px;
 height: 100px;
 `;
