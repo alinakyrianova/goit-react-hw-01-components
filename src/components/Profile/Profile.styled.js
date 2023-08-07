@@ -1,10 +1,14 @@
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 
 export const Container = styled.div`
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 50px;
+margin: 20px auto;
+  overflow: hidden;
+  width: 600px;
+  border: 1px solid #9e9e9e;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const Description = styled.div`
