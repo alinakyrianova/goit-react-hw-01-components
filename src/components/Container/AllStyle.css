@@ -1,5 +1,5 @@
 .profile {
-    background-color: #93dea1;
+    background-color: #93acde;
     color: #f2f8f8;
     border-radius: 5px;
 
@@ -16,7 +16,7 @@
     flex-direction: row;
     list-style: none;
 
-    background-color: #f3f7fa;
+    background-color: #6291e8;
 
     text-transform: uppercase;
 }
