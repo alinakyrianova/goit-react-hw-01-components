@@ -1,4 +1,4 @@
- import { Container, List , ListItem, Image, Description} from './Profile.styled.js';
+import { Container, List, UserName, Tag, Location, ListItem, Image, Description} from './Profile.styled.js';
 
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
@@ -11,9 +11,9 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
                     alt={username}
                     className="avatar"
                 />
-                <p className="name">{username}</p>
-                <p className="tag">@{tag}</p>
-                <p className="location">{location}</p>
+                <UserName>{username}</UserName>
+                <Tag>@{tag}</Tag>
+                <Location>{location}</Location>
             </Description>
             <List>
                 <ListItem>
