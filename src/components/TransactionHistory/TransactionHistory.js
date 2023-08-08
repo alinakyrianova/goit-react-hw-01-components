@@ -1,8 +1,7 @@
 import {
   TableContainer,
     TableHead,
-  /*TableHeader,*/
-  TableRow ,
+  TableRow,
   TableBody,
   TableData,
 } from './TransactionHistory.styled.js';
