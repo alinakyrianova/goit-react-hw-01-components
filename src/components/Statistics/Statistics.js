@@ -1,10 +1,10 @@
 import {
-  Wrapper,
-  Topic,
-  ListStat,
-  ListItem,
-  TextPercentage,
-  TextLabel,
+  StatContainer,
+  Title,
+  StatList,
+  Item,
+  StatLabel,
+  StatPercentage,
 } from './Statistics.styled';
 
 function getRandomHexColor() {
@@ -13,21 +13,18 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-export const Statistics = ({ stats, title }) => {
+export const StatElement = ({ id, label, percentage }) => (
+  <Item key={id} label={label} style={{backgroundColor: getRandomHexColor()}}>
+    <StatLabel>{label}</StatLabel>
+    <StatPercentage>{percentage}%</StatPercentage>
+  </Item>
+);
+    
+export const Statistics = ({ title, stats }) => {
   return (
-    <Wrapper>
-      {title && <Topic>{title}</Topic>}
-      <ListStat>
-        {stats.map(dat => (
-          <ListItem
-            style={{ backgroundColor: getRandomHexColor() }}
-            key={dat.id}
-          >
-            <TextLabel>{dat.label}</TextLabel>
-            <TextPercentage>{dat.percentage}%</TextPercentage>
-          </ListItem>
-        ))}
-      </ListStat>
-    </Wrapper>
+    <StatContainer>
+      {title && <Title>{title}</Title>}
+      <StatList>{stats.map(StatElement)}</StatList>
+    </StatContainer>
   );
 };
