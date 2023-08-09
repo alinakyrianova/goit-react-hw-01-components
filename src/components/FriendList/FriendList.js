@@ -8,7 +8,7 @@ const FriendList = ({ friends }) => {
                 <ItemFriend key={friend.id} >
                     <FriendListItem avatar={friend.avatar}
                         name={friend.name}
-                        isOnline={friend.isONLINE}
+                        isOnline={friend.isOnline}
                     />
                 </ItemFriend>
             ))}
